@@ -22,9 +22,18 @@ This project explores transactional data from a UK-based non-store online retail
 
 ## Key Insights from Data Analysis 🔑
 
-### Sales Trends
-- A distinct seasonality in sales was observed, with peaks typically around the start and end of the year.
-- Total sales reached a high of approximately 1.2 million in November 2011, highlighting effective promotional strategies or seasonal demand.
+## Cancellation Trend Over Time
+![Cancellation Trend Over Time](Cancellation_Trend_Over_Time.png)
+The cancellation trend shows significant fluctuations, peaking notably towards the end of the year. The total cancellation rate for the period is 2.19%, suggesting a need for further investigation into the causes of these spikes, which may be linked to seasonal sales increases.
+
+## Daily Sales Trend Over Time
+![Sales Trend Over Time](sales_trend_over_time.png)
+The sales data exhibit strong seasonality with peaks around specific times of the year, likely correlating with holidays and promotional events. Notable spikes in sales volume suggest successful marketing tactics during these periods.
+
+
+## Top 10 Countries by Sales
+![Top 10 Countries by Sales](top10_countresbysale.png)
+Sales are predominantly concentrated in the United Kingdom, followed by Germany and EIRE, highlighting significant market potential in these regions. The UK alone accounts for the vast majority of total sales, suggesting a strategic focus on this market.
 
 ### Product Performance
 - The top-selling product, "REGENCY CAKESTAND 3 TIER," generated 69,242.50.
@@ -37,10 +46,28 @@ This project explores transactional data from a UK-based non-store online retail
 - Applied K-Means clustering to segment customers into three distinct groups, helping tailor marketing efforts to specific customer behaviors.
 - The optimal number of clusters, determined through silhouette scoring, was three, with a silhouette score of 0.4642, indicating moderately distinct clusters.
 
-## Cancellation Insights 🚫
 
-- Analyzed cancellation trends to detect patterns and potential areas for policy adjustments.
-- The total cancellation rate stood at 2.19%, with cancellations peaking in late 2011.
+## Elbow Method for Optimal K
+![Elbow Method](elbow.png)
+The inertia graph declines sharply between K=2 to K=3 and then plateaus, indicating that K=3 is the optimal number of clusters for segmenting this data set, minimizing within-cluster sum of squares.
+
+## Silhouette Score for Different Cluster Sizes
+![Silhouette Score](silhoutes.png)
+The silhouette scores peak at K=3, with a score of approximately 0.464, indicating a reasonable structure has been captured by this clustering, though there's room for refinement.
+
+## Customer Segmentation Using Hierarchical Clustering
+![Hierarchical Clustering](hierarchical_clustering.png)
+This segmentation reveals three main clusters with clear differences in customer behavior based on recent interactions (recency) and spending (monetary value). The clusters suggest different targeting strategies for customer engagement.
+
+## Customer Segmentation Using K-Means
+![K-Means Clustering](kmean.png)
+The K-means clustering aligns with the hierarchical method, also suggesting three customer segments. This approach provides a foundation for personalized marketing campaigns based on the observed spending patterns and engagement levels.
+
+## Sales Performance & Customer Insights Dashboard
+![Online Retail Dashboard](online_retail_dashboard.png)
+- The dashboard encapsulates a total revenue of over 5.8 million from roughly 18,500 orders, serviced by 4,372 customers.
+- It illustrates key metrics such as average revenue per order and monthly sales trends, providing a snapshot of business health and customer purchasing behavior.
+- The geographic insights on the map show varied average sales across countries, useful for global strategy alignment.
 
 ## Conclusion 📜
 - This analysis provides actionable insights into enhancing product offerings, improving customer engagement, and reducing cancellations.
